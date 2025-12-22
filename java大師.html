@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><body>
+
+<style>
+#header2{height:200vh;background-color:#84C1FF}
+#space2{height:4vh}
+p{margin:auto;text-align:center;font-size:36px;padding-top:4vh}
+table, td, th {border:0px solid black}
+td {height:100px;width:400px}
+table{margin:auto;position:relative}
+input{height:30px;font-size:30px;position:relative;left:13px}
+button{margin:auto;text-align:center;font-size:36px}
+img{display:none;margin:auto;height:260px;width:390px;position:relative;top:100px}
+
+</style>
+<div id="header2">
+<p>輸入你想要了解的顏色</p>
+
+<div id="space2">
+</div>
+
+<table style="height:30px"><tr>
+<td><input id="demo" type="text"></td>
+<td><button type="button" onclick="test()" style="width:150px;font-size:30px;background-color:#FFE153;position:relative;left:110px">確認</button></td>
+</tr></table>
+<p id="r"></p>
+<img id="picture" src="https://cdn-www.cw.com.tw/article/202003/article-5e74490f94b03.jpg">
+<img id="picture2" src="https://hips.hearstapps.com/hmg-prod/images/24-mib3-1560279542.jpg">
+<img id="picture3" src="https://img.carstuff.com.tw/images/stories/2015/PiersYu/7JULY/0720/lambo/019.jpg">
+<img id="picture4" src="https://photo.travelking.com.tw/news/3894_e_1.jpg">
+<img id="picture5" src="https://hips.hearstapps.com/hmg-prod/images/freshly-squeezed-orange-juice-royalty-free-image-1713267577.jpg?crop=1xw:1xh;center,top">
+<img id="picture6" src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1024,format=auto/sites/default/files/d8/images/canvas/2025/08/26/ca5e2ad0-2fbc-45b3-ac9d-86f83b85b9a0_8294a555.jpg">
+
+</div>
+</div>
+<script>
+function test() {
+	let x = document.getElementById("demo").value;
+	let y = document.querySelector("#picture");
+	let z = document.querySelector("#picture2");
+	let a = document.querySelector("#picture3");
+	let b = document.querySelector("#picture4");
+	let c = document.querySelector("#picture5");
+	let d = document.querySelector("#picture6");
+	const str = document.querySelector('#r');
+	str.style.fontSize = "28px";
+	if (x == "") {
+		document.querySelector('#r').innerHTML="未輸入顏色";
+		str.style.fontSize = "32px";
+		y.style.display="none";
+		z.style.display="none";
+		a.style.display="none";
+		b.style.display="none";
+		c.style.display="none";
+		d.style.display="none";
+	}
+	else {
+		if (x=="白色"){
+			document.querySelector('#r').innerHTML=
+			"<br>白色是所有色彩中明度最高的顏色,具有高貴、純潔、和平的象徵。</br><br>白色給人一種很舒服的意象,常用於建築上面,在穿搭上面也頗為常見。</br><br>通常喜歡白色的人,大多性格都比較保守,與喜歡黑色的人可以達到性格互補的效果。</br>";
+			y.style.display="block";
+			z.style.display="none";
+			a.style.display="none";
+			b.style.display="none";
+			c.style.display="none";
+			d.style.display="none";
+		}
+		else if (x=="黑色"){
+			document.querySelector('#r').innerHTML="<br>黑色是所有色彩中明度最低的顏色,帶給人一種神秘且高級的感覺。</br><br>黑色元素經常出現於服裝、繪畫、科技產品中,也會出現在一些神話故事中。</br><br>通常喜歡黑色的人,大多都比較有個性,與喜歡白色的人可以達到性格互補的效果。</br>";
+			y.style.display="none";
+			z.style.display="block";
+			a.style.display="none";
+			b.style.display="none";
+			c.style.display="none";
+			d.style.display="none";
+		}
+		else if (x=="紅色"){
+			document.querySelector('#r').innerHTML="<br>又稱為赤色,紅色具有強烈的視覺效果,擁有勇敢、熱情、浪漫的意象。</br><br>紅色常用於化妝品與家具之中,由於紅色在東方具有吉祥的象徵,因此過年的時候也有很多紅色元素。</br><br>通常喜歡紅色的人,可能渴望受到注目,也可能擁有一顆熱情的心。</br>";
+			y.style.display="none";
+			z.style.display="none";
+			a.style.display="block";
+			b.style.display="none";
+			c.style.display="none";
+			d.style.display="none";
+		}
+		else if (x=="綠色"){
+			document.querySelector('#r').innerHTML="<br>綠色是大自然最常見的顏色,變成為了大自然的代表色,此外綠色也有環保、和平、青春的象徵。</br><br>綠色常常出現在食物、飾品、服裝,而「戴綠帽」一詞意指另一半外遇,綠色也擁有被劈腿的隱喻。</br><br>通常喜歡綠色的人,都崇尚著心靈的富足,或許對大自然有興趣。</br>";
+			y.style.display="none";
+			z.style.display="none";
+			a.style.display="none";
+			b.style.display="block";
+			c.style.display="none";
+			d.style.display="none";
+		}
+		else if (x=="橘色"){
+			document.querySelector('#r').innerHTML="<br>橘色為紅色與黃色的混和色,跟橙色相比較接近紅色,給人溫暖、活潑、樂觀的感覺。</br><br>橘色大多出現在花朵、品牌、警示物,同時也會出現在一些節慶活動上。</br><br>通常喜歡橘色的人,都很樂觀積極,與喜歡藍色的人有著可愛的反差。</br>";
+			y.style.display="none";
+			z.style.display="none";
+			a.style.display="none";
+			b.style.display="none";
+			c.style.display="block";
+			d.style.display="none";
+		}
+		else if (x=="藍色"){
+			document.querySelector('#r').innerHTML="<br>藍色擁有冷靜、沉穩、優雅的形象,藍色大多出現在天空、海洋、牛仔褲上面。</br><br>在化工染料之前,要得到藍色必須藉由礦物質來取得,算是很稀有的顏色。</br><br>通常喜歡藍色的人,也喜歡平靜的生活,與喜歡橘色的人有著有趣的反差。</br>";
+			y.style.display="none";
+			z.style.display="none";
+			a.style.display="none";
+			b.style.display="none";
+			c.style.display="none";
+			d.style.display="block";
+		}
+		else{
+			document.querySelector('#r').innerHTML="沒有相關資料";
+			str.style.fontSize = "32px";
+			y.style.display="none";
+			z.style.display="none";
+			a.style.display="none";
+			b.style.display="none";
+			c.style.display="none";
+			d.style.display="none";
+		} 
+	}
+}
+
+</script></body></html>
